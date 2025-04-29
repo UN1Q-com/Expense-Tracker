@@ -1,4 +1,5 @@
 import { View, Text, StyleSheet, Image } from 'react-native';
+import { colors } from '../../../config/theme';
 
 const Header = () => {
     return (
@@ -25,13 +26,16 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         width: '100%',
         paddingHorizontal: 24,
+        backgroundColor: colors.mainGreen
     },
     greeting: {
         fontSize: 16,
+        color: colors.white,
     },
     name: {
         fontSize: 24,
         fontWeight: 'bold',
+        color: colors.white,
     },
 });
 
