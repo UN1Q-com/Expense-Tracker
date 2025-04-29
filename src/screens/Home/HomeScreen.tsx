@@ -4,6 +4,8 @@ import {useSelector, useDispatch} from 'react-redux';
 import {RootState} from '../../config/redux/store';
 import {increment, decrement} from '../../config/redux/store/counterSlice';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
+import { Card, Header, HistoryCard } from '../../components/molecules';
+import { CircleProfile } from '../../components/atoms';
 
 /* TODO 1 - Implement the Home screen as shown in the design. (the image in spec)
   
@@ -28,6 +30,14 @@ const HomeScreen: React.FC = () => {
 
   return (
     <View style={[styles.container, backgroundStyle]}>
+      <Header />
+      <View style={{marginTop: 10}}/>
+      <Card />
+      <View style={{marginTop: 10}}/>
+      <HistoryCard title='Paypal' date="Today" amount={120} isIncome icon={require("./../../assets/png/paypal.png")} />
+      <View style={{marginTop: 10}}/>
+      <CircleProfile />
+      
       <Text style={styles.counterText}>Count: {count}</Text>
       <Button title="Increase" onPress={() => dispatch(increment())} />
       <Button title="Decrease" onPress={() => dispatch(decrement())} />
